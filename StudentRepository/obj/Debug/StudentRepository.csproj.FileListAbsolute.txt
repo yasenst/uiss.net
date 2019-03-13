@@ -1,0 +1,6 @@
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\bin\Debug\StudentRepository.exe.config
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\bin\Debug\StudentRepository.exe
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\bin\Debug\StudentRepository.pdb
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\obj\Debug\StudentRepository.csprojResolveAssemblyReference.cache
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\obj\Debug\StudentRepository.exe
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\obj\Debug\StudentRepository.pdb

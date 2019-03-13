@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyUserLogin", "MyUserLogin\MyUserLogin.csproj", "{D883D29A-D159-466E-B4CB-FA19A6CEF493}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRepository", "StudentRepository\StudentRepository.csproj", "{E8E2975F-4CF4-4500-8392-AF0CBC71B917}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D883D29A-D159-466E-B4CB-FA19A6CEF493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D883D29A-D159-466E-B4CB-FA19A6CEF493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D883D29A-D159-466E-B4CB-FA19A6CEF493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D883D29A-D159-466E-B4CB-FA19A6CEF493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E2975F-4CF4-4500-8392-AF0CBC71B917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E2975F-4CF4-4500-8392-AF0CBC71B917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E2975F-4CF4-4500-8392-AF0CBC71B917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E2975F-4CF4-4500-8392-AF0CBC71B917}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
