@@ -7,7 +7,7 @@ using System.IO;
 
 namespace MyUserLogin
 {
-    static class Logger
+    static public class Logger
     {
         static private List<string> currentSessionActivities = new List<string>();
 

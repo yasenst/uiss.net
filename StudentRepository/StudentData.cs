@@ -7,20 +7,29 @@ using System.IO;
 
 namespace StudentRepository
 {
-    class StudentData
+    public class StudentData
     {
-        static private Student testStudent;
+        static private List<Student> _testStudents = new List<Student>();
 
-        static public Student TestStudent
+        static public List<Student> TestStudents
         {
             get
             {
-                return testStudent;
+                initStudentData();
+                return _testStudents;
             }
             private set
             {
 
             }
+        }
+
+        static private void initStudentData()
+        {
+            _testStudents.Add(new Student("Yasen", "Yasenov", "Yasenski", "FKST", "KSI", "Bachelor", "active", "081", 3, 9, 44));
+            _testStudents.Add(new Student("Ivan", "Yasenov", "Yasenski", "FKST", "KSI", "Master", "active", "206", 5, 8, 13));
+            _testStudents.Add(new Student("Georgi", "Yasenov", "Yasenski", "FKST", "KSI", "Bachelor", "active", "120", 1, 9, 46));
+            _testStudents.Add(new Student("Andrey", "Yasenov", "Yasenski", "FKST", "KSI", "Bachelor", "active", "101", 4, 10, 51));
         }
 
         static public Student getStudentByFacultyNumber(List<Student> students, string facultyNumber)

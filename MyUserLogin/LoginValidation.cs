@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyUserLogin
 {
-    class LoginValidation
+    public class LoginValidation
     {
 
         private string username;
