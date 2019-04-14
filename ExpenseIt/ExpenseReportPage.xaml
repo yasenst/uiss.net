@@ -8,7 +8,42 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="ExpenseIt - View Expense">
 
-    <Grid>
+    <Grid Margin="10,0,10,10">
+        <Grid.Background>
+            <ImageBrush ImageSource="watermark.png"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0">View Expense Report</Label>
+            <Label Grid.Row="1" >Name:</Label>
+            <Label Grid.Row="2">Department:</Label>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">
+                    <Label VerticalAlignment="Center" Foreground="White">Expense Type</Label>
+                </Border>
+                <Border Grid.Column="1" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">
+                    <Label VerticalAlignment="Center" Foreground="White">Amount</Label>
+                </Border>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
