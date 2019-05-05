@@ -26,8 +26,8 @@ namespace StudentRepository
 
         static private void initStudentData()
         {
-            _testStudents.Add(new Student("Yasen", "Yasenov", "Yasenski", "FKST", "KSI", "Bachelor", "active", "081", 3, 9, 44));
-            _testStudents.Add(new Student("Ivan", "Yasenov", "Yasenski", "FKST", "KSI", "Master", "active", "206", 5, 8, 13));
+            _testStudents.Add(new Student("Yasen", "Yasenov", "Yasenski", "FKST", "KSI", "Bachelor", "active", "82", 3, 9, 44));
+            _testStudents.Add(new Student("Ivan", "Yasenov", "Yasenski", "FKST", "KSI", "Master", "active", "83", 5, 8, 13));
             _testStudents.Add(new Student("Georgi", "Yasenov", "Yasenski", "FKST", "KSI", "Bachelor", "active", "120", 1, 9, 46));
             _testStudents.Add(new Student("Andrey", "Yasenov", "Yasenski", "FKST", "KSI", "Bachelor", "active", "101", 4, 10, 51));
         }

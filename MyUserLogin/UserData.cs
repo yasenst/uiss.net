@@ -41,7 +41,7 @@ namespace MyUserLogin
             u2.activeTo = DateTime.MaxValue;
 
             User u3 = new User();
-            u3.username = "Yasen3";
+            u3.username = "Ivan";
             u3.password = "123456";
             u3.number = "83";
             u3.role = UserRoles.STUDENT;

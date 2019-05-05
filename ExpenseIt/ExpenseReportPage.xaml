@@ -19,14 +19,34 @@
         
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0">View Expense Report</Label>
-            <Label Grid.Row="1" >Name:</Label>
-            <Label Grid.Row="2">Department:</Label>
+
+            <Label Grid.Row="0">Expense Report</Label>
+            
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="1" Grid.Column="0">Name:</Label>
+                <Label Grid.Row="1" Grid.Column="1" Content="{Binding XPath=@Name}"></Label>
+            </Grid>
+            
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="2" Grid.Column="0">Department:</Label>
+                <Label Grid.Row="2" Grid.Column="1" Content="{Binding XPath=@Department}"></Label>
+            </Grid>
+            <!--
             <Grid Grid.Row="3">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -43,7 +63,16 @@
                 <Border Grid.Column="1" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">
                     <Label VerticalAlignment="Center" Foreground="White">Amount</Label>
                 </Border>
+                
             </Grid>
+            -->
+            <DataGrid  Grid.Row="3" ItemsSource="{Binding XPath=Expense}"
+                AutoGenerateColumns="False" RowHeaderWidth="0" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ExpenseType" Binding="{Binding XPath=@ExpenseType}" />
+                    <DataGridTextColumn Header="Amount" Binding="{Binding XPath=@ExpenseAmount}"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </Grid>
     </Grid>
 </Page>

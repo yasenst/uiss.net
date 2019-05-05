@@ -19,3 +19,7 @@ d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\obj\De
 d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\obj\Debug\StudentInfoSystem.csproj.GenerateResource.Cache
 d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\obj\Debug\StudentInfoSystem.exe
 d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\obj\Debug\StudentInfoSystem.pdb
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\obj\Debug\LoginPage.g.cs
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\obj\Debug\LoginPage.baml
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\obj\Debug\StudentPage.g.cs
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\obj\Debug\StudentPage.baml

@@ -19,7 +19,7 @@ namespace StudentInfoSystem
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : NavigationWindow
     {
         public MainWindow()
         {
@@ -33,39 +33,5 @@ namespace StudentInfoSystem
             if (MessageBox.Show("Do you want to close?", "Confirm close", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 e.Cancel = false;
         }
-        /*
-        private void clearBtn_Click(object sender, RoutedEventArgs e)
-        {
-            foreach (var item in MainGrid.Children)
-            {
-                if (item is TextBox)
-                {
-                    ((TextBox)item).Text = "";
-                }
-            }
-        }
-
-        private void fillButton_Click(object sender, RoutedEventArgs e)
-        {
-            Student s = StudentData.TestStudents[0];
-
-            nameTxt.Text = s.name;
-            surnameTxt.Text = s.surname;
-            lastnameTxt.Text = s.lastname;
-
-            facultyTxt.Text = s.faculty;
-            specialtyTxt.Text = s.specialty;
-            oksTxt.Text = s.degree;
-            statusTxt.Text = s.status;
-            numberTxt.Text = s.number;
-
-            kursTxt.Text = s.year.ToString();
-            potokTxt.Text = s.potok.ToString();
-            groupTxt.Text = s.group.ToString();
-
-        }
-        */
     }
-
-    
 }
