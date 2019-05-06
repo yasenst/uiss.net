@@ -9,13 +9,14 @@ namespace MyUserLogin
 {
     public class User
     {
-        public string username { get; set; }
-        public string password { get; set; }
-        public string number { get; set; }
+        public System.Int32 UserId { get; set; }
+        public System.String username { get; set; }
+        public System.String password { get; set; }
+        public System.Int32 number { get; set; }
         public UserRoles role { get; set; }
-        public DateTime dateCreated { get; set; }
-        public DateTime activeTo { get; set; }
+        public System.DateTime dateCreated { get; set; }
+        public System.DateTime? activeTo { get; set; }
 
-        
+        public User() { }
     }
 }

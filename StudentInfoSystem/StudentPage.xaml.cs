@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using StudentRepository;
+using MyUserLogin;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -23,9 +24,6 @@ namespace StudentInfoSystem
     /// </summary>
     public partial class StudentPage : Page
     {
-        public List<string> StudStatusChoices { get; set; }
-
-
         public StudentPage()
         {
             InitializeComponent();
@@ -34,10 +32,57 @@ namespace StudentInfoSystem
         public StudentPage(object data)
         : this()
         {
-            FillStudStatusChoices()
+            FillStudStatusChoices();
             this.DataContext = data;
         }
 
+        public List<string> StudStatusChoices { get; set; }
+
+        private bool TestStudentsIfEmpty()
+        {
+            StudentInfoContext context = new StudentInfoContext();
+            IEnumerable<Student> queryStudents = context.Students;
+            int countStudents = queryStudents.Count();
+
+            if (countStudents == 0)
+                return true;
+            return false;
+        }
+
+        private void CopyTestStudents()
+        {
+            StudentInfoContext context = new StudentInfoContext();
+
+            foreach (Student st in StudentData.TestStudents)
+            {
+                context.Students.Add(st);
+            }
+            context.SaveChanges();
+        }
+
+        private bool TestUsersIfEmpty()
+        {
+            StudentInfoContext context = new StudentInfoContext();
+            IEnumerable<User> queryUsers = context.Users;
+            int countUsers = queryUsers.Count();
+
+            if (countUsers == 0)
+                return true;
+            return false;
+        }
+
+        private void CopyTestUsers()
+        {
+            StudentInfoContext context = new StudentInfoContext();
+
+            foreach (User st in UserData.TestUsers)
+            {
+                context.Users.Add(st);
+            }
+            context.SaveChanges();
+        }
+
+        
 
         private void FillStudStatusChoices()
         {
@@ -98,7 +143,7 @@ namespace StudentInfoSystem
             specialtyTxt.Text = s.specialty;
             oksTxt.Text = s.degree;
             //statusTxt.Text = s.status;
-            numberTxt.Text = s.number;
+            //numberTxt.SetValue(s.number);
 
             courseTxt.Text = s.year.ToString();
             potokTxt.Text = s.potok.ToString();
@@ -131,6 +176,15 @@ namespace StudentInfoSystem
         {
             LoginPage loginPage = new LoginPage();
             this.NavigationService.Navigate(loginPage);
+        }
+
+        private void testBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (TestStudentsIfEmpty())
+                CopyTestStudents();
+
+            if (TestUsersIfEmpty())
+                CopyTestUsers();
         }
     }
 }

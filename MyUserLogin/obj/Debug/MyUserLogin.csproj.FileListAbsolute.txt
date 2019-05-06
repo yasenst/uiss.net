@@ -5,3 +5,7 @@ d:\my documents\visual studio 2017\Projects\YS_44_Yasen\MyUserLogin\obj\Debug\My
 d:\my documents\visual studio 2017\Projects\YS_44_Yasen\MyUserLogin\obj\Debug\MyUserLogin.exe
 d:\my documents\visual studio 2017\Projects\YS_44_Yasen\MyUserLogin\obj\Debug\MyUserLogin.pdb
 d:\my documents\visual studio 2017\Projects\YS_44_Yasen\MyUserLogin\bin\Debug\test.txt
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\MyUserLogin\bin\Debug\EntityFramework.dll
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\MyUserLogin\bin\Debug\EntityFramework.SqlServer.dll
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\MyUserLogin\bin\Debug\EntityFramework.xml
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\MyUserLogin\bin\Debug\EntityFramework.SqlServer.xml

@@ -23,3 +23,7 @@ d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\obj\De
 d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\obj\Debug\LoginPage.baml
 d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\obj\Debug\StudentPage.g.cs
 d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\obj\Debug\StudentPage.baml
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\bin\Debug\EntityFramework.dll
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\bin\Debug\EntityFramework.SqlServer.dll
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\bin\Debug\EntityFramework.xml
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentInfoSystem\bin\Debug\EntityFramework.SqlServer.xml

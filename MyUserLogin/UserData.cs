@@ -24,10 +24,11 @@ namespace MyUserLogin
         static private void ResetTestUserData()
         {
             //_testUsers = new User[3];
+            _testUsers = new List<User>();
             User u1 = new User();
             u1.username = "Yasen1";
             u1.password = "123456";
-            u1.number = "81";
+            u1.number = 81;
             u1.role = UserRoles.ADMIN;
             u1.dateCreated = DateTime.Now;
             u1.activeTo = DateTime.MaxValue;
@@ -35,7 +36,7 @@ namespace MyUserLogin
             User u2 = new User();
             u2.username = "Yasen2";
             u2.password = "123456";
-            u2.number = "82";
+            u2.number = 82;
             u2.role = UserRoles.STUDENT;
             u2.dateCreated = DateTime.Now;
             u2.activeTo = DateTime.MaxValue;
@@ -43,7 +44,7 @@ namespace MyUserLogin
             User u3 = new User();
             u3.username = "Ivan";
             u3.password = "123456";
-            u3.number = "83";
+            u3.number = 83;
             u3.role = UserRoles.STUDENT;
             u3.dateCreated = DateTime.Now;
             u3.activeTo = DateTime.MaxValue;
@@ -55,8 +56,10 @@ namespace MyUserLogin
 
         static public User isUserPassCorrect(string username, string password)
         {
-            ResetTestUserData();
-            List<User> u = (from user in _testUsers
+            //ResetTestUserData();
+            UserContext context = new UserContext();
+
+            List<User> u = (from user in context.Users
                     where (user.username.Equals(username))
                     && (user.password.Equals(password))
                     select user).ToList();
@@ -64,39 +67,52 @@ namespace MyUserLogin
             if (u.Any())
                 return u.First();
             return null;
-                /*
-            for (int i = 0; i < _testUsers.Count; i++)
-            {
-                if (username.Equals(_testUsers[i].username) &&
-                    password.Equals(_testUsers[i].password))
-                {
-                    return _testUsers[i];
-                }
-            }
-            return null;
-            */
+               
         }
 
         static public bool setUserActiveTo(int userIndex, DateTime newDate)
         {
+            /*
             if (!AllUsersUsernames().ContainsValue(userIndex))
             {
                 return false;
             }
 
             _testUsers[userIndex].activeTo = newDate;
+            */
+            UserContext context = new UserContext();
+
+            User usr =
+            (from u in UserData.TestUsers
+             where u.UserId == userIndex
+             select u).First();
+            usr.activeTo = newDate;
+
+            context.SaveChanges();
+
             Logger.LogActivity("Change in activity of " + _testUsers[userIndex].username);
             return true;
         }
 
         static public bool assignUserRole(int userIndex, UserRoles newRole)
         {
+            /*
             if (!AllUsersUsernames().ContainsValue(userIndex))
             {
                 return false;
             }
 
             _testUsers[userIndex].role = newRole;
+            */
+            UserContext context = new UserContext();
+
+            User usr =
+            (from u in UserData.TestUsers
+             where u.UserId == userIndex
+             select u).First();
+            usr.role = newRole;
+
+            context.SaveChanges();
             //Console.WriteLine("Role of " + _testUsers[userIndex].username + " is " + _testUsers[userIndex].role);
             Logger.LogActivity("Change in role of " + _testUsers[userIndex].username);
             return true;

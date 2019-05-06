@@ -11,6 +11,27 @@ namespace MyUserLogin
     {
         static private List<string> currentSessionActivities = new List<string>();
 
+        static public bool TestLogsIfEmpty()
+        {
+            LoggerContext context = new LoggerContext();
+            IEnumerable<Log> queryLogs = context.Logs;
+            int countLogs = queryLogs.Count();
+
+            if (countLogs == 0)
+                return true;
+            return false;
+        }
+
+        static public void Log(User user)
+        {
+            LoggerContext context = new LoggerContext();
+            
+            Log log = new Log(user);
+
+            context.Logs.Add(log);
+            context.SaveChanges();
+        }
+        
         static public void LogActivity(string activity)
         {
             string activityLine = DateTime.Now + ": "

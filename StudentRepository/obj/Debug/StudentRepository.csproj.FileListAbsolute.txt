@@ -8,3 +8,7 @@ d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\bin\De
 d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\bin\Debug\MyUserLogin.exe
 d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\bin\Debug\MyUserLogin.pdb
 d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\bin\Debug\MyUserLogin.exe.config
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\bin\Debug\EntityFramework.dll
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\bin\Debug\EntityFramework.SqlServer.dll
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\bin\Debug\EntityFramework.xml
+d:\my documents\visual studio 2017\Projects\YS_44_Yasen\StudentRepository\bin\Debug\EntityFramework.SqlServer.xml

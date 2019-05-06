@@ -29,9 +29,7 @@ namespace StudentInfoSystem
         {
             InitializeComponent();
         }
-
-
-
+        
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
             string username = usernameTxt.Text;
@@ -47,10 +45,13 @@ namespace StudentInfoSystem
 
                 if (user != null)
                 {
+                    Logger.TestLogsIfEmpty();
+                    Logger.Log(user);
                     Student student = null;
-                    student = StudentValidation.GetStudentDataByUser(user);
+                    student = StudentData.getStudentByFacultyNumber(user.number);
                     if (student != null)
                     {
+                        
                         StudentPage studentPage = new StudentPage(student);
                         this.NavigationService.Navigate(studentPage);
                     }

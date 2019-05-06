@@ -11,11 +11,11 @@ namespace StudentRepository
         static public void Main(string[] args)
         {
 
-
+            /*
             List<Student> students = StudentData.TestStudents;
             
-            string facultyNumber = Console.ReadLine();
-
+            string input = Console.ReadLine();
+            int facultyNumber = int.Parse(input);
             Student currentStudent = StudentData.getStudentByFacultyNumber(students, facultyNumber);
 
             string certificate = StudentData.prepareCertificate(currentStudent);
@@ -25,6 +25,7 @@ namespace StudentRepository
             StudentData.saveCertificate(certificate);
 
             StudentData.saveCertificate(students);
+            */
         }
     }
 }
