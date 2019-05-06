@@ -9,7 +9,7 @@ namespace StudentRepository
     public class Student
     {
         public int StudentId { get; set; }
-        public string name { get; set; }
+        public System.String name { get; set; }
         public string surname { get; set; }
         public string lastname { get; set; }
         public string faculty { get; set; }

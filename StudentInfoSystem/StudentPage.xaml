@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:StudentInfoSystem"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="Student Information System" Height="450" Width="625">
+      Title="Student Information System" Height="480" Width="625">
     <Grid Name="MainGrid" Margin="10,0,10,10">
         <GroupBox Header="Лични данни" Margin="0,0,300,335">
             <Grid Name="StudentInfoGrid">
@@ -24,17 +24,17 @@
 
                 <Label Grid.Row="0" Grid.Column="0" Content="Име:"/>
                 <TextBox Grid.Row="0" Grid.Column="2" Margin="0,0,0,5" Name="nameTxt" 
-                         Text = "{Binding name, Mode = OneWay}" Grid.ColumnSpan="2" />
+                         Text = "{Binding CurrentStudent.name, Mode = OneWay}" Grid.ColumnSpan="2" />
                 <Label Grid.Row="1" Grid.Column="0" Content="Презиме:"/>
                 <TextBox Grid.Row="1" Grid.Column="2" Margin="0,0,0,5" Name="surnameTxt" 
-                         Text = "{Binding surname, Mode = OneWay}" Grid.ColumnSpan="2"/>
+                         Text = "{Binding CurrentStudent.surname, Mode = OneWay}" Grid.ColumnSpan="2"/>
                 <Label Grid.Row="2" Grid.Column="0" Content="Фамилия"/>
                 <TextBox Grid.Row="2" Grid.Column="2" Margin="0,0,0,5" Name="lastnameTxt" 
-                         Text = "{Binding lastname, Mode = OneWay}" Grid.ColumnSpan="2"/>
+                         Text = "{Binding CurrentStudent.lastname, Mode = OneWay}" Grid.ColumnSpan="2"/>
             </Grid>
         </GroupBox>
-        <GroupBox Header="Студентска информация" Margin="0,110,300,90">
-            <Grid Name="StudentInfoGrid2">
+        <GroupBox Header="Студентска информация" Margin="0,110,300,10">
+            <Grid Name="StudentInfoGrid2" Margin="0,22,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="107"/>
                     <ColumnDefinition Width="5*" />
@@ -55,29 +55,29 @@
 
                 <Label Grid.Row="0" Grid.Column="0" Content="Факултет:"/>
                 <TextBox Grid.Row="0" Grid.Column="1" Margin="0,0,0,5"  Name="facultyTxt" 
-                         Text = "{Binding faculty, Mode = OneWay}" Grid.ColumnSpan="4"/>
+                         Text = "{Binding CurrentStudent.faculty, Mode = OneWay}" Grid.ColumnSpan="4"/>
                 <Label Grid.Row="1" Grid.Column="0" Content="Специалност:"/>
                 <TextBox Grid.Row="1" Grid.Column="1" Margin="0,0,0,5" Name="specialtyTxt" 
-                         Text = "{Binding specialty, Mode = OneWay}" Grid.ColumnSpan="4"/>
+                         Text = "{Binding CurrentStudent.specialty, Mode = OneWay}" Grid.ColumnSpan="4"/>
                 <Label Grid.Row="2" Grid.Column="0" Content="ОКС:"/>
                 <TextBox Grid.Row="2" Grid.Column="1" Margin="0,0,0,5" Name="oksTxt" 
-                         Text = "{Binding degree, Mode = OneWay}" Grid.ColumnSpan="4"/>
+                         Text = "{Binding CurrentStudent.degree, Mode = OneWay}" Grid.ColumnSpan="4"/>
                 <Label Grid.Row="3" Grid.Column="0" Content="Статус:"/>
                 <ListBox Grid.Row="3" Grid.Column="1" Margin="0,0,0,5" Name="statusTxt" 
                          ItemsSource = "{Binding StudStatusChoices}" Grid.ColumnSpan="4">
                 </ListBox>
                 <Label Grid.Row="4" Grid.Column="0" Content="Фак. номер:"/>
                 <TextBox Grid.Row="4" Grid.Column="1" Margin="0,0,0,5" Name="numberTxt" 
-                         Text = "{Binding number, Mode = OneWay}" Grid.ColumnSpan="4"/>
+                         Text = "{Binding CurrentStudent.number, Mode = OneWay}" Grid.ColumnSpan="4"/>
                 <Label Grid.Row="5" Grid.Column="0" Content="Курс:"/>
                 <TextBox Grid.Row="5" Grid.Column="1" Margin="0,0,0,5" Name="courseTxt" 
-                         Text = "{Binding year, Mode = OneWay}" Grid.ColumnSpan="4"/>
+                         Text = "{Binding CurrentStudent.year, Mode = OneWay}" Grid.ColumnSpan="4"/>
                 <Label Grid.Row="6" Grid.Column="0" Content="Поток:"/>
                 <TextBox Grid.Row="6" Grid.Column="1" Margin="0,0,0,5" Name="potokTxt" 
                          Text = "{Binding potok, Mode = OneWay}" Grid.ColumnSpan="4"/>
                 <Label Grid.Row="7" Grid.Column="0" Content="Група:"/>
                 <TextBox Grid.Row="7" Grid.Column="1" Margin="0,0,0,5" Name="groupTxt" 
-                         Text = "{Binding group, Mode = OneWay}" Grid.ColumnSpan="4"/>
+                         Text = "{Binding CurrentStudent.group, Mode = OneWay}" Grid.ColumnSpan="4"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Снимка" Margin="324,10,52,249">
@@ -85,7 +85,7 @@
         </GroupBox>
         <Button x:Name="clearBtn" Content="Clear" HorizontalAlignment="Left" Margin="324,253,0,0" VerticalAlignment="Top" Width="75" Click="clearBtn_Click"/>
         <Button x:Name="fillButton" Content="Fill" HorizontalAlignment="Left" Margin="324,292,0,0" VerticalAlignment="Top" Width="75" Click="fillButton_Click"/>
-        <Button x:Name="disableButton" Content="Toggle" HorizontalAlignment="Left" Margin="324,217,0,0" VerticalAlignment="Top" Width="75" Click="disableButton_Click" />
+        <Button x:Name="disableButton" Content="Toggle" HorizontalAlignment="Left" Margin="324,332,0,0" VerticalAlignment="Top" Width="75" Click="disableButton_Click" />
         <Button x:Name="logoutBtn" Content="LOGOUT" HorizontalAlignment="Left" Margin="478,238,0,0" VerticalAlignment="Top" Width="75" Click="logoutBtn_Click" />
         <Button x:Name="testBtn" Content="test" HorizontalAlignment="Left" Margin="478,277,0,0" VerticalAlignment="Top" Width="75" Click="testBtn_Click"/>
     </Grid>

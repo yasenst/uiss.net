@@ -47,14 +47,9 @@ namespace StudentInfoSystem
                 {
                     Logger.TestLogsIfEmpty();
                     Logger.Log(user);
-                    Student student = null;
-                    student = StudentData.getStudentByFacultyNumber(user.number);
-                    if (student != null)
-                    {
-                        
-                        StudentPage studentPage = new StudentPage(student);
-                        this.NavigationService.Navigate(studentPage);
-                    }
+                    
+                    StudentPage studentPage = new StudentPage(user.number);
+                    this.NavigationService.Navigate(studentPage);
                 }
             }
         }

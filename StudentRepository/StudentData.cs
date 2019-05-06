@@ -35,6 +35,7 @@ namespace StudentRepository
 
         static public Student getStudentByFacultyNumber(int facNum)
         {
+            
             StudentContext context = new StudentContext();
 
             Student result =
@@ -42,6 +43,7 @@ namespace StudentRepository
              where st.number == facNum
              select st).FirstOrDefault();
             return result;
+            
         }
 
         static public string prepareCertificate(Student student)

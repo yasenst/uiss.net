@@ -27,15 +27,19 @@ namespace StudentInfoSystem
         public StudentPage()
         {
             InitializeComponent();
+            
         }
 
         public StudentPage(object data)
         : this()
         {
+
+            FillStudent(data);
             FillStudStatusChoices();
-            this.DataContext = data;
+            this.DataContext = this;
         }
 
+        public Student CurrentStudent { get; set; }
         public List<string> StudStatusChoices { get; set; }
 
         private bool TestStudentsIfEmpty()
@@ -82,8 +86,13 @@ namespace StudentInfoSystem
             context.SaveChanges();
         }
 
+        private void FillStudent(object data)
+        {
+            CurrentStudent = new Student();
+            CurrentStudent = StudentData.getStudentByFacultyNumber(int.Parse(data.ToString()));
+        }
         
-
+        
         private void FillStudStatusChoices()
         {
             StudStatusChoices = new List<string>();
@@ -108,8 +117,6 @@ namespace StudentInfoSystem
                 }
             }
         }
-
-
 
         private void clearBtn_Click(object sender, RoutedEventArgs e)
         {
